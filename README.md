@@ -6,7 +6,9 @@ hello docker, hello jupyter, hello world: minimal setup for starting with docker
 docker build -t zvsx/hello1 .
 ```
 
-# run notebook with one shared directory (current local directory maps to '/hello' in docker image)
+# run image with one shared directory
+current local directory maps to '/hello' in docker image
+which means we will have our notebooks saved on host machine even after we kill/remove this image or docker itself
 ```
 docker run -i -p 8888:8888 -v $PWD:/hello -t zvsx/hello1 bash -c 'cd /hello && jupyter notebook --no-browser --ip 0.0.0.0 --port=8888'
 ```
