@@ -17,3 +17,5 @@ something like:
 http://localhost:8888/tree?token=<auth_token>
 ```
 
+# go to 'hello.ipynb' notebook or create your own
+
